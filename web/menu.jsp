@@ -134,7 +134,7 @@ A.active {
 														target=main>－ 新增客户</A></TD>
 												</TR>
 												<TR> 
-													<TD class=menuSmall><A class=style2 href="${ pageContext.request.contextPath }/customer_find.action"
+													<TD class=menuSmall><A class=style2 href="${ pageContext.request.contextPath }/jsp/customer/list.jsp"
 														target=main>－ 客户列表</A></TD>
 												</TR>
 												

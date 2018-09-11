@@ -5,6 +5,8 @@ import com.itheima.ssh.service.CustomerService;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
+import java.util.List;
+
 /**
  * @ClassName CustomerAction
  * @Description TODO
@@ -50,4 +52,38 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
         customerService.save(customer);
         return NONE;
     }
-}
+
+    /**
+     * 功能描述: 修改客户
+     * @auther: tangfugui
+     * @date: 2018/9/11 14:02
+     * @param: [customer]
+     * @return: void
+     */
+    public void update(Customer customer){
+        customerService.update(customer);
+    }
+
+    /**
+     * 功能描述: 删除客户
+     * @auther: tangfugui
+     * @date: 2018/9/11 14:03
+     * @param: [cust_id]
+     * @return: void
+     */
+    public void delete(Long cust_id){
+        customerService.delete(cust_id);
+    }
+
+    /**
+     * 功能描述: 查询客户列表
+     * @auther: tangfugui
+     * @date: 2018/9/11 14:12
+     * @param: []
+     * @return: void
+     */
+    public List<Customer> find(){
+        List<Customer> list = customerService.find();
+        return list;
+    }
+ }
